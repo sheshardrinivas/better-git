@@ -1,5 +1,5 @@
 # Better-git
-<img src="readme.png" alt="banner" width="300" height="150" />
+<img src="readme.png" alt="banner" width="150" height="150" />
 
 
 ## Git made for easy of use.
