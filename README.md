@@ -4,4 +4,4 @@
 
 ## Git made for easy of use.
 
-<ins>Better Git</ins> is an lightweight version control system which is easy. And it has better documention.
+<ins>Better Git</ins> is an lightweight version control system.
