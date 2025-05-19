@@ -136,15 +136,3 @@ export function decoding(data) {
   console.log(decoded_data);
   return decoded_data;
 }
-
-// export function print_encoded_data() {
-//   for (let index = 0; index < encoded_data.length; index++) {
-//     console.log(encoded_data[index]);
-//   }
-// }
-
-// export function print_decoded_data() {
-//   for (let index = 0; index < encoded_data.length; index++) {
-//     console.log(decoded_data[index]);
-//   }
-// }
