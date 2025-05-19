@@ -1,0 +1,24 @@
+{
+  "name": "better-git",
+  "version": "1.0.0",
+  "description": "<img src=\"readme.png\" alt=\"banner\" width=\"150\" height=\"150\" />",
+  "main": "main.js",
+  "dependencies": {
+    "clack": "^0.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheshardrinivas/better-git.git"
+  },
+  "keywords": [],
+  "author": "sheshadrinivas",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/sheshardrinivas/better-git/issues"
+  },
+  "homepage": "https://github.com/sheshardrinivas/better-git#readme"
+}
