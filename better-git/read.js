@@ -1,7 +1,5 @@
 import * as fs from "fs";
 
-import { encoding, decoding } from "./encoding&decoding.js";
-
 function remove_file(folder_files, traget) {
   for (let y = 0; y < folder_files.length; y++) {
     folder_files = folder_files.filter((item) => item !== traget[y]);
@@ -25,5 +23,3 @@ const nonDotFiles = folder.filter((file) => !file.startsWith("."));
 let ignore = betterignore(dotFiles);
 let new_list = remove_file(nonDotFiles, ignore);
 console.log(new_list);
-// let encoded_data = encoding(data);
-// let decoded_data = decoding(encoded_data);

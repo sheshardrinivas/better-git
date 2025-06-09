@@ -199,6 +199,7 @@ let decoding_codes = {
 let encoded_data = [];
 let decoded_data = "";
 export function encoding(data) {
+  encoded_data = [];
   for (let words = 0; words < data.length; words++) {
     for (let letters = 0; letters < data[words].length; letters++) {
       encoded_data.push(encoding_codes[data[words][letters]]);
@@ -208,6 +209,7 @@ export function encoding(data) {
   return encoded_data;
 }
 export function decoding(data) {
+  decoded_data = "";
   for (let w = 0; w < data.length; w++) {
     decoded_data = decoded_data + decoding_codes[data[w]];
   }
