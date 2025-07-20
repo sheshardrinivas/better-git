@@ -45,3 +45,4 @@ export function commit(files, commit_number, commit_message, date, time) {
     console.log("invaild commit number");
   }
 }
+commit(["./commit.js"], 2, "2 commit", "2025-07-20", "12:01:44")
