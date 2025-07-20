@@ -1,2 +1,5 @@
 node_modules/
 readme.png
+.betterignore.json
+.saved_file.json
+.commit_number.json
