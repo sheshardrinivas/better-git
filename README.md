@@ -17,3 +17,7 @@ how to use .betterignore
 2)type out the files you want to be ignored
 
 3)save the file
+
+- auto_commit -shipped
+    - commits files automatically.
+    - with encoding and decoding.
