@@ -1,11 +1,14 @@
 import * as fs from "fs";
 import * as path from "path";
+import { commit } from "./commit.js";
 
-
+let saved_number = [];
 function remove_file(folder_files, traget) {
   console.log(folder_files);
   for (let y = 0; y < folder_files.length; y++) {
-    folder_files = folder_files.filter((item) => item !== traget[y]);
+    for (let x = 0; x < traget.length; x++) {
+      folder_files = folder_files.filter((item) => item !== traget[x]);
+    }
   }
   return folder_files;
 }
@@ -26,4 +29,12 @@ const dotFiles = folder.filter((file) => file.startsWith("."));
 const nonDotFiles = folder.filter((file) => !file.startsWith("."));
 let ignore = betterignore("../",dotFiles);
 let new_list = remove_file(nonDotFiles,ignore);
-console.log(new_list);
+try {
+    saved_number = JSON.parse(
+      fs.readFileSync("../.commit_number.json", "utf8"),
+    );
+  } catch (SyntaxError) {
+    saved_number = [];
+  }
+console.log(new_list,saved_number);
+commit(new_list,saved_number+1,`${saved_number+1} commit`,"2025-07-20","13:17:53")
