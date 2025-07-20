@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { encoding } from "./encoding&decoding.js";
+import { encoding } from "./encoding_decoding.js";
 
 let data = [];
 
@@ -24,7 +24,7 @@ export function commit(files, commit_number, commit_message, date, time) {
       saved_data = [];
     }
     for (let i = 0; i < files.length; i++) {
-      file = fs.readFileSync("../"+files[i], "utf8");
+      file = fs.readFileSync("../" + files[i], "utf8");
       file = encoding(file);
       data.push(file);
     }
