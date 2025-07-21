@@ -13,7 +13,7 @@ function remove_file(folder_files, traget) {
   return folder_files;
 }
 
-function betterignore(directory,list_of_dot_files) {
+function betterignore(directory, list_of_dot_files) {
   for (let i = 0; i < list_of_dot_files.length; i++) {
     if (list_of_dot_files[i] === ".betterignore.json") {
       const filePath = path.join(directory, list_of_dot_files[i]);
@@ -27,16 +27,20 @@ function betterignore(directory,list_of_dot_files) {
 const folder = fs.readdirSync("../");
 const dotFiles = folder.filter((file) => file.startsWith("."));
 const nonDotFiles = folder.filter((file) => !file.startsWith("."));
-let ignore = betterignore("../",dotFiles);
-let new_list = remove_file(nonDotFiles,ignore);
-let date=new Date();
-let time=date.toLocaleTimeString();
+let ignore = betterignore("../", dotFiles);
+let new_list = remove_file(nonDotFiles, ignore);
+let date = new Date();
+let time = date.toLocaleTimeString();
 try {
-    saved_number = JSON.parse(
-      fs.readFileSync("../.commit_number.json", "utf8"),
-    );
-  } catch (SyntaxError) {
-    saved_number = [];
-  }
-console.log(new_list,saved_number);
-commit(new_list,saved_number+1,`${saved_number+1} commit`,date.toLocaleDateString(),time);
+  saved_number = JSON.parse(fs.readFileSync("../.commit_number.json", "utf8"));
+} catch (SyntaxError) {
+  saved_number = [];
+}
+console.log(new_list);
+commit(
+  new_list,
+  saved_number + 1,
+  `${saved_number + 1} commit`,
+  date.toLocaleDateString(),
+  time,
+);

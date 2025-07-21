@@ -196,13 +196,14 @@ let decoding_codes = {
   96: "Y",
   97: "Z",
 };
+
 let encoded_data = [];
 let decoded_data = "";
 export function encoding(data) {
   encoded_data = [];
   for (let words = 0; words < data.length; words++) {
     for (let letters = 0; letters < data[words].length; letters++) {
-      encoded_data.push(encoding_codes[data[words][letters]]);
+      encoded_data.push(encoding_codes[data[words][letters]] * 3);
     }
   }
   console.log(encoded_data);
@@ -211,7 +212,7 @@ export function encoding(data) {
 export function decoding(data) {
   decoded_data = "";
   for (let w = 0; w < data.length; w++) {
-    decoded_data = decoded_data + decoding_codes[data[w]];
+    decoded_data = decoded_data + decoding_codes[data[w] / 3];
   }
   console.log(decoded_data);
   return decoded_data;
