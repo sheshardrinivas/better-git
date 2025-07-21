@@ -5,3 +5,4 @@ readme.png
 .commit_number.json
 .saved_file.json
 hello.json
+.env
