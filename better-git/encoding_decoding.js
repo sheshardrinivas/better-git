@@ -1,3 +1,8 @@
+import * as fs from "fs";
+
+let key = fs.readFileSync(".env", "utf8");
+key = parseInt(key);
+
 let encoding_codes = {
   a: 1,
   b: 2,
@@ -203,7 +208,7 @@ export function encoding(data) {
   encoded_data = [];
   for (let words = 0; words < data.length; words++) {
     for (let letters = 0; letters < data[words].length; letters++) {
-      encoded_data.push(encoding_codes[data[words][letters]] * 3);
+      encoded_data.push(encoding_codes[data[words][letters]] * key);
     }
   }
   console.log(encoded_data);
@@ -212,7 +217,7 @@ export function encoding(data) {
 export function decoding(data) {
   decoded_data = "";
   for (let w = 0; w < data.length; w++) {
-    decoded_data = decoded_data + decoding_codes[data[w] / 3];
+    decoded_data = decoded_data + decoding_codes[data[w] / key];
   }
   console.log(decoded_data);
   return decoded_data;
