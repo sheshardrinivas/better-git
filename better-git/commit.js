@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { encoding } from "./encoding_decoding.js";
+import { encoding } from "./encoding_decoding.ts";
 
 let data = [];
 
