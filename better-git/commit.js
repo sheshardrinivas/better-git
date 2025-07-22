@@ -25,7 +25,7 @@ export function commit(files, commit_number, commit_message, date, time) {
     }
     for (let i = 0; i < files.length; i++) {
       file = fs.readFileSync("../" + files[i], "utf8");
-      file = encoding(file);
+      file = encoding(file, "");
       data.push(file);
     }
     data.push(commit_number);
