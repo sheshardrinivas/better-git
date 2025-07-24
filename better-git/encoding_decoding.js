@@ -205,7 +205,7 @@ const decoding_codes = {
 let encoded_data = [];
 let decoded_data = "";
 export function encoding(data, key_path) {
-  key = fs.readFileSync(`${key_path}.env`, "utf8");
+  key = fs.readFileSync(`${key_path}.key`, "utf8");
   key_value = parseInt(key);
 
   encoded_data = [];
@@ -219,7 +219,7 @@ export function encoding(data, key_path) {
   return encoded_data;
 }
 export function decoding(data, key_path) {
-  key = fs.readFileSync(`${key_path}.env`, "utf8");
+  key = fs.readFileSync(`${key_path}.key`, "utf8");
   key_value = parseInt(key);
   decoded_data = "";
   for (let w = 0; w < data.length; w++) {

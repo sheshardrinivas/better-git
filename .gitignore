@@ -6,4 +6,5 @@ readme.png
 .saved_file.json
 hello.json
 .env
+.key
 test.js
