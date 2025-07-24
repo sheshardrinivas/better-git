@@ -42,6 +42,6 @@ export function commit(files, commit_number, commit_message, date, time) {
       JSON.stringify(commit_number, null, 2),
     );
   } else {
-    console.log("invaild commit number");
+    return Error("Invalid commit number");
   }
 }

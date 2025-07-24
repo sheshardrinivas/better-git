@@ -36,11 +36,15 @@ try {
 } catch (SyntaxError) {
   saved_number = [];
 }
-console.log(new_list);
-commit(
-  new_list,
-  saved_number + 1,
-  `${saved_number + 1} commit`,
-  date.toLocaleDateString(),
-  time,
-);
+
+try {
+  var commit = commit(
+    new_list,
+    saved_number + 1,
+    `${saved_number + 1} commit`,
+    date.toLocaleDateString(),
+    time,
+  );
+} catch (error) {
+  console.error(error);
+}

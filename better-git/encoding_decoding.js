@@ -215,7 +215,7 @@ export function encoding(data, key_path) {
       encoded_data.push(encoding_codes[letter] * key_value);
     }
   }
-  console.log(encoded_data);
+
   return encoded_data;
 }
 export function decoding(data, key_path) {
@@ -225,6 +225,6 @@ export function decoding(data, key_path) {
   for (let w = 0; w < data.length; w++) {
     decoded_data = decoded_data + decoding_codes[data[w] / key_value];
   }
-  console.log(decoded_data);
+
   return decoded_data;
 }
