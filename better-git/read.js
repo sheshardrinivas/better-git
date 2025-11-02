@@ -28,6 +28,7 @@ const folder = fs.readdirSync("../");
 const dotFiles = folder.filter((file) => file.startsWith("."));
 const nonDotFiles = folder.filter((file) => !file.startsWith("."));
 let ignore = betterignore("../", dotFiles);
+console.log(ignore);
 let new_list = remove_file(nonDotFiles, ignore);
 let date = new Date();
 let time = date.toLocaleTimeString();
@@ -38,7 +39,7 @@ try {
 }
 
 try {
-  var commit = commit(
+  var commit_value = commit(
     new_list,
     saved_number + 1,
     `${saved_number + 1} commit`,
