@@ -6,18 +6,9 @@
 
 <ins>Better Git</ins> is an lightweight version control system.
 
-
-- .betterignore -shipped
-    - removes files named in the file -shipped
-
-how to use .betterignore
-
-1)make an .betterignore.JSON
-
-2)type out the files you want to be ignored
-
-3)save the file
-
 - auto_commit -shipped
     - commits files automatically.
     - with encoding and decoding.
+
+<ins>How to use</ins>
+make .key file in the better-git folder then write the value by which it should get encoded. Then add the file name to the gitignore file.
